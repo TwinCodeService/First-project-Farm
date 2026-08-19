@@ -1,0 +1,46 @@
+
+## 📁 Estructura del Proyecto — 22 archivos
+
+```
+granja-de-aguada/
+│
+├── .env                          ← Variables de entorno
+├── package.json                  ← Dependencias y scripts
+├── tsconfig.json                 ← Configuración TypeScript
+├── next.config.ts                ← Configuración Next.js
+├── next-env.d.ts                 ← Tipos Next.js (auto)
+│
+├── prisma/
+│   ├── schema.prisma             ← Esquema de BD (5 modelos)
+│   └── seed.ts                   ← 4 categorías + 21 productos
+│
+├── db/
+│   └── (custom.db)               ← Se crea automáticamente
+│
+├── public/
+│   ├── app.js                    ← ⭐ TODA la lógica JS (778 líneas)
+│   ├── logo.svg                  ← Logo del sitio
+│   ├── robots.txt                ← SEO
+│   └── images/
+│       ├── hero.png              ← Imagen hero
+│       ├── cat-agricultura.png   ← Categoría Agricultura
+│       ├── cat-ganaderia.png     ← Categoría Ganadería
+│       ├── cat-insumos.png       ← Categoría Insumos
+│       └── cat-servicios.png     ← Categoría Servicios
+│
+└── src/
+    ├── lib/
+    │   └── db.ts                 ← Cliente Prisma
+    │
+    └── app/
+        ├── globals.css           ← ⭐ TODO el CSS (550 líneas)
+        ├── layout.tsx            ← Layout con SEO meta
+        ├── page.tsx              ← HTML shell + carga app.js
+        │
+        └── api/
+            ├── categories/route.ts       ← GET categorías
+            ├── contact/route.ts          ← GET/POST mensajes
+            ├── products/route.ts         ← GET/POST productos
+            ├── products/[id]/route.ts    ← GET/PUT/DELETE producto
+            ├── orders/route.ts           ← GET/POST pedidos
+            └── orders/[id]/route.ts      ← PUT/DELETE pedido
